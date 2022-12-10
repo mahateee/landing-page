@@ -1,0 +1,242 @@
+body{
+    background-color: #000000;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    color: white;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+p{
+    margin-top: 20px;
+    line-height: 70px;
+    padding: 20px;
+}
+section{
+    height: 100vh;
+}
+/* style navbar */
+.nav_container{
+    display: flex;
+    align-items: center;
+    padding: 10px 40px;
+    flex-direction: row-reverse;
+}
+.nav_list{
+    width: 600px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    
+}
+a{
+    text-decoration: none;
+}
+.data-nav{
+    padding: 30px;
+    margin: 30px;
+}
+.nav_link a{
+    font-size: 20px;
+    text-transform: capitalize;
+    color: white;
+
+}
+.nav_link a:hover{
+    color: hsla(34,83%,47%,1);
+}
+.active div{
+
+    animation: myAnim 3s ease 0s 1 normal forwards;
+
+}
+@keyframes myAnim {
+	0% {
+		opacity: 0.1;
+	}
+    25% {
+		opacity: 0.3;
+	}
+
+	50% {
+		opacity: 0.5;
+	}
+    75% {
+		opacity: 0.75;
+	}
+    90%{
+        opacity: 0.9;
+    }
+
+	100% {
+		opacity: 1;
+	}
+}
+
+/* style section 1 */
+#section1{
+    background-color:hsla(0,0%,0%,1);
+    background-image:
+    radial-gradient(at 30% 58%, hsla(4,51%,46%,1) 0px, transparent 50%),
+    radial-gradient(at 21% 44%, hsla(9,83%,44%,1) 0px, transparent 50%),
+    radial-gradient(at 54% 44%, hsla(34,83%,47%,1) 0px, transparent 50%),
+    radial-gradient(at 40% 60%, hsla(4,86%,49%,1) 0px, transparent 50%);
+
+}
+#section1 h2{
+    margin-top: 100px;
+    text-align: left;
+    font-size: 80px;
+    padding: 20px;
+}
+#section1  p{
+    font-size: 30px;
+    width: 40%;
+}
+
+/* style section 2 */
+#section2{
+    background-color:hsla(0,0%,0%,1);
+background-image:
+radial-gradient(at 18% 51%, hsla(9,83%,44%,1) 0px, transparent 50%),
+radial-gradient(at 82% 42%, hsla(34,83%,47%,1) 0px, transparent 50%),
+radial-gradient(at 65% 57%, hsla(4,86%,49%,1) 0px, transparent 50%);
+}
+#section2 div{
+    width: 75%;
+    align-items: center;
+    display: grid;
+    grid-template-areas: "a a a"
+    "b b c"
+    "b b c";
+    gap: 5%;
+}
+#section2 h2{
+    font-size: 100px;
+    padding: 10px;
+    font-weight: 300;
+    grid-area: a;
+}
+#section2  p{
+    font-weight: 100;
+    font-size: 30px;
+    grid-area: b;
+}
+#section2 img{
+    height:500px;
+}
+/* style section 3 */
+
+#section3{
+    background-color:hsla(0,0%,0%,1);
+background-image:
+radial-gradient(at 18% 91%, hsla(9,83%,44%,1) 0px, transparent 50%),
+radial-gradient(at 82% 42%, hsla(34,83%,47%,1) 0px, transparent 50%),
+radial-gradient(at 65% 57%, hsla(4,86%,49%,1) 0px, transparent 50%);
+}
+#section3 div{
+    width: 75%;
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(4,25%) ;
+    grid-template-rows: repeat(4,25%);
+}
+#section3 h2{
+    font-size: 300px;
+    font-weight: 200;
+    grid-column: 1/4;
+}
+#section3 p{
+    font-weight: 100;
+    grid-column: 3/5;
+    grid-row: 2/4;
+    font-size: 20px;
+}
+/* style section 4 */
+#section4{
+    background-color:hsla(0,0%,0%,1);
+background-image:
+radial-gradient(at 39% 47%, hsla(4,51%,46%,1) 0px, transparent 50%),
+radial-gradient(at 18% 2%, hsla(9,83%,44%,1) 0px, transparent 50%),
+radial-gradient(at 85% 54%, hsla(34,83%,47%,1) 0px, transparent 50%),
+radial-gradient(at 66% 76%, hsla(4,86%,49%,1) 0px, transparent 50%);
+}
+#section4 div{
+    display: grid;
+    grid-template-areas: 
+    "t t"
+    "a a"
+    "b c";
+    justify-content: center;
+    align-content: center;
+}
+#section4 h2{
+    grid-area: t;
+    font-size: 80px;
+}
+#section4 p{
+    grid-area: a;
+    font-size: 20px;
+}
+#section4 .phone{
+    grid-area: b;
+    padding: 20px;
+    font-size: 24px;
+}
+#section4 .email{
+    grid-area: c;
+    padding: 20px;
+    font-size: 24px;
+}
+
+/* mobile screen */
+@media (max-width:826px){
+    html,body{
+        padding: 0;
+        width: 100vh;
+        height: 100%;
+        box-sizing: border-box;
+    }
+    section{
+        height: 1827px;
+    }
+    #section1,#section2{
+        display: flex;
+        align-items: center;
+    }
+    #section2 div{
+        width: 100%;
+    }
+    #section3 div{
+        padding-top: 30px;
+    }
+    #section3 p {
+        font-weight: 100;
+        grid-column: 2/5;
+        grid-row: 3/4;
+    }
+    .nav_link a{
+        font-size: 28px;
+    }
+    #section4 div{
+        display: grid;
+        grid-template-rows: repeat(5,200px);
+        grid-template-columns: none;
+        grid-template-areas: none;
+        align-items: center;
+    }
+    #section4 h2{
+        grid-row: 2/3;
+    }
+    #section4 p{
+        grid-row: 3/4;
+    }
+    #section4 .phone{
+        grid-row: 4/5;
+    }
+    #section4 .email{
+        grid-row: 5/6;
+    }
+}
+
